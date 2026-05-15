@@ -11,8 +11,7 @@ table titled 'SAR Compound List.xlsx' in the datasets folder. This table should
 have two columns labeled 'Compound' and 'Parent'. If no file is included,
 the program will run without mappings.
 
-Run IC50_Analysis.exe, which will prompt you to specify which files you want
-to process.
+Run the executable, whilch will prompt you to accept default values or adjust.
 
 This will create a folder called 'results', which, for each table, will
 generate figures showing the fitted curves and a summary of the fits. Once all
