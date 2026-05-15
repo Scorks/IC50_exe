@@ -1,9 +1,9 @@
 # Automated dose-response curve analysis using 4-parameter logistic regression.
 
-v0.3.1-dev
+v1.0.0
 
 To run, ensure that your spreadsheets containing relevant tables are included
-within the 'datasets' folder. The name does not matter, nor do the number of
+within the 'datasets' folder. The name of the file does not matter, nor do the number of
 pages included.
 
 Further, ensure that if you wish to use SAR mappings, include the SAR mapping
