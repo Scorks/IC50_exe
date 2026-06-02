@@ -1,5 +1,7 @@
-# Automated dose-response curve analysis using 4-parameter logistic regression.
-
+<p align="center">
+  <img src="assets/ic50.png" alt="logo" width="40" height="40"/>
+  <h1>Automated dose-response curve analysis using 4-parameter logistic regression.</h1>
+</p>
 v1.0.0
 
 To run, ensure that your spreadsheets containing relevant tables are included
@@ -11,8 +13,7 @@ table titled 'SAR Compound List.xlsx' in the datasets folder. This table should
 have two columns labeled 'Compound' and 'Parent'. If no file is included,
 the program will run without mappings.
 
-Run IC50_Analysis.exe, which will prompt you to specify which files you want
-to process.
+Run the executable, whilch will prompt you to accept default values or adjust.
 
 This will create a folder called 'results', which, for each table, will
 generate figures showing the fitted curves and a summary of the fits. Once all
@@ -26,11 +27,3 @@ compound), the lower bound is held constant at 0.045. Thus, if the top is fit
 at 0.55 and the bottom is fit at 0.06, then IC50 is calculated where Y =
 (0.55-0.045) rather than (0.55-0.06). This aligns with the absolute IC50
 rather than the relative IC50.
-
-Update 2026.01.16: Added MIC values and contamination alerts.
-Update 2026.01.22: Added log2 and log10 options.
-Update 2026.01.23: Added SAR mapping, updating both table summaries and full summary spreadsheet.
-Update 2026.05.10: Response threshold for MIC determination changed from 0.085 changed to 0.089 and added adjustment prompt.
-
-If you have any questions or comments, please email me (CASTR5@ulaval.ca
-or cstrick4@uwo.ca).
