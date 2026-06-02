@@ -1,5 +1,7 @@
-# Automated dose-response curve analysis using 4-parameter logistic regression.
-
+<p align="center">
+  <img src="assets/ic50.png" alt="logo" width="40" height="40"/>
+  <h1>Automated dose-response curve analysis using 4-parameter logistic regression.</h1>
+</p>
 v1.0.0
 
 To run, ensure that your spreadsheets containing relevant tables are included
