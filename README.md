@@ -2,11 +2,9 @@
   <img src="assets/ic50.png" alt="IC50 logo" width="80" height="80"/>
 </p>
 
-<h1 align="center">IC50</h1>
-
-<p align="center">
-  Automated dose-response curve analysis using 4-parameter logistic regression.
-</p>
+<h1 align="center">
+  Automated dose-response curve analysis using 4-parameter logistic regression
+</h1>
 
 ---
 
