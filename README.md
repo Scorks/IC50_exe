@@ -6,6 +6,13 @@
   Automated dose-response curve analysis using 4-parameter logistic regression
 </h1>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/version-2.1.0-blue" alt="Version 2.1.0"/>
+  <img src="https://img.shields.io/badge/platform-Windows-0078D6" alt="Platform: Windows"/>
+  <img src="https://img.shields.io/badge/status-stable-brightgreen" alt="Status: stable"/>
+  <img src="https://img.shields.io/badge/readers-Tecan%20%7C%20Cytation%205-8A2BE2" alt="Readers: Tecan | Cytation 5"/>
+</p>
+
 ---
 
 ## Setup
