@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-2.0.0-blue" alt="Version 2.1.0"/>
+  <img src="https://img.shields.io/badge/version-2.2.0-blue" alt="Version 2.2.0"/>
   <img src="https://img.shields.io/badge/platform-Windows-0078D6" alt="Platform: Windows"/>
   <img src="https://img.shields.io/badge/readers-Tecan%20%7C%20Cytation%205-8A2BE2" alt="Readers: Tecan | Cytation 5"/>
 </p>
@@ -26,8 +26,11 @@ IC50 folder/
 ```
 
 Plate files can have any name and any number of sheets. Tecan and Cytation 5
-exports are detected automatically. For S/I/R interpretation and CLSI QC, each
-sheet name must end in its strain code (e.g. `1601` or `DN1601`).
+exports are detected automatically. For S/I/R interpretation and CLSI QC, each sheet name must match a strain code
+in the config. The full sheet name is checked first, ignoring capitalization
+(e.g. `CY-Str-aga-001-2024`). If it isn't found, simple letter-and-number names
+match by their number (e.g. `DN1601` matches `1601`). Other names must match
+exactly.
 
 ## Configuration File (Optional)
 
@@ -80,6 +83,24 @@ the right of that table:
   0.015625 to 16).
 
 Unrecognized headers or unreadable values are flagged before and after the run.
+
+## TMP/SMX Scoring
+
+TMP/SMX MICs are scored as the first well with at least 80% inhibition. Each
+plate's mean E1–H1 value is used as 100% growth, and its mean A1–D1 value is
+subtracted as the blank. All other drugs use the MIC threshold.
+
+Recognized names include `TMP/SMX` and `SMX/TMP`, `co-trimoxazole`, ignoring capitalization, spacing, and
+punctuation. If the controls are unusable, the MIC threshold is used instead and
+an alert is shown. The `MIC_Method` column shows how each MIC was scored.
+
+## Possible Precipitation
+
+Increasing readings after the MIC are flagged as possible precipitation instead
+of contamination when at least 3 consecutive wells rise through the highest
+concentration. The MIC doesn't change. These wells are left out of the curve fit
+when at least 4 other points remain, and they're shown as orange triangles on the
+plot. This flag is based on the reading pattern, so review these wells manually.
 
 ## Running
 
