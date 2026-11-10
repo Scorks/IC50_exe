@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/ic50.png" alt="IC50 logo" width="80" height="80"/>
+  <img src="assets/flask-2d.svg" width="80" heigh="80">
 </p>
 
 <h1 align="center">
